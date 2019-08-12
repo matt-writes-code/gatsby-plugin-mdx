@@ -16,8 +16,27 @@ const IndexPage = () => (
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
+    <hr />
+    <h1>gatsby-plugin-mdx</h1>
     <Link to="demo" style={demo}>Demo</Link>
     <br /><br />
+    <p>How to install gatsby-plugin-mdx</p>
+    <li>npm install gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react
+</li>
+    <li>add this configuration in gatsby-config.js
+</li>
+    <pre>{`plugins:[
+      {
+        resolve: 'gatsby-plugin-mdx',
+        options: {
+        defaultLayouts: {
+            default : require.resolve('./src/components/layout.js')
+                        }
+                  }
+      }
+      ]`}</pre>
+    <li>Create an .mdx file in the pages folder.</li>
+    <li>Import and write React!</li>
   </Layout>
 )
 
